@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <script type="module" src="./components/home.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link rel="icon" href="./assets/icon.jpeg" type="image/x-icon"/>
+</head>
+<body>
+    <h1>Weather App</h1>
+    <form id="searchForm">
+        <input id="location" type="text" placeholder="enter a location">
+        <input id="search" type="submit" value="search">
+    </form>
+    <img id="loader" style="display: none" src="./assets/loading.gif"/>
+    <div id="container">
+        <div id="section">
+            <p id="place"></p>
+            <p id="celsius"></p>
+            <img id="weatherIcon" height="200">
+            <p id="condition"></p>
+            <p id="fahrenheit"></p>
+        </div>
+    </div>
+    <div id="forecast"></div>
+    <div id="forecastButtons"></div>
+    <div id="dayHourContainer"></div>
+</body>
+</html>

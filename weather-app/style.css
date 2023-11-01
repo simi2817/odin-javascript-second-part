@@ -1,0 +1,101 @@
+* {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-image: url('./assets/background.jpeg');
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    color: #25394f;
+    margin: 10px;
+}
+
+form {
+    text-align: center;
+    padding: 20px;
+}
+
+p {
+    margin: 0em;
+    text-align: center;
+    font-size: xx-large;
+}
+
+#container {
+    display: grid;
+    justify-content: center;
+    margin: 100px;
+}
+
+#section {
+    display: grid;
+    justify-content: center;
+    margin: 10px;   
+    width: 100%;   
+    color: #25394f;
+    font-weight: bolder;
+    padding: 20px;
+    
+}
+
+.section {
+    border: 2px solid rgb(184, 184, 190);
+    background: rgba(106, 138, 151, 0.8);
+    box-shadow: 0 0 10px;
+}
+
+button {
+    height: 50px;
+    width: 100px;
+    border: none;
+    margin: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: rgb(211, 228, 234);
+}
+
+#celsius {
+    font-size: 50px;
+}
+
+#dayHourContainer {
+    opacity: 0.7;
+    display: flex;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.day {
+    color: bisque;
+    background-color: black;
+    border: 2px solid black;
+    padding: 10px;
+    width: 300px;
+    text-align: center;
+    font-size: larger;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hour {
+    border: 2px solid bisque;
+    background-color: black;
+    color: bisque;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
