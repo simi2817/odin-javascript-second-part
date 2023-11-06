@@ -1,4 +1,4 @@
-
+//recursive function
 const mergeSort = (arr) => {
     if(arr.length <= 1)
         return arr;
@@ -12,19 +12,25 @@ const mergeSort = (arr) => {
     return merge(mergeSort(left), mergeSort(right));
 }
 
+//helper function
 const merge = (left, right) => {
     const sorted = [];
     let leftIndex = 0;
     let rightIndex = 0;
 
     if(left && right) {
+        console.log(`left array: ${left}`);
+        console.log(`right array: ${right}`);
         while(leftIndex < left.length && rightIndex < right.length) {
             if(left[leftIndex] < right[rightIndex]) {
+                console.log(`${left[leftIndex]} < ${right[rightIndex]}`);
                 sorted.push(left[leftIndex]);
+                console.log(`yes -> ${sorted}`);
                 leftIndex++;
             }
             else {
                 sorted.push(right[rightIndex]);
+                console.log(`no -> ${sorted}`);
                 rightIndex++;
             }
         }
@@ -32,14 +38,15 @@ const merge = (left, right) => {
         while(leftIndex < left.length) {
             sorted.push(left[leftIndex]);
             leftIndex++;
-        } //can be replaced with sorted.push(...left.slice(leftIndex))
+        } //36 - can be replaced with sorted.push(...left.slice(leftIndex))
 
         while(rightIndex < right.length) {
             sorted.push(right[rightIndex]);
             rightIndex++;
-        } //can be replaced with sorted.push(...right.slice(rightIndex))
+        } //41 - can be replaced with sorted.push(...right.slice(rightIndex))
     }
-    return sorted;
+    console.log(`sorted: ${sorted}`);
+    return sorted; //can be replaced with single line without 36 & 41 as return [...sorted, ...left.slice(leftIndex), ...right(rightIndex)]
 }
 
 console.log(mergeSort([3,6,1,2,9,4,8,5,7]));
